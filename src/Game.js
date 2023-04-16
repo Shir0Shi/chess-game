@@ -141,16 +141,16 @@ async function updateGame(pendingPromotion, reset){
     }
 }
 function getGameResult(){
-    if(chess.isCheckmate()){
+    if(chess.in_checkmate()){
         const winner = chess.turn()=== "w" ? 'BLACK' : "WHITE"
         return `CHECKMATE - WINNER - ${winner}`
     } else if (chess.in_draw()){
         let reason = `50 - MOVES - RULE`
-        if(chess.isStalemate()){
+        if(chess.in_stalemate()){
             reason = `STALEMATE`
-        } else if (chess.isThreefoldRepetition()){
+        } else if (chess.in_threefold_repetition()){
             reason = 'REPETITION'
-        }else if (chess.isInsufficientMaterial()){
+        }else if (chess.insufficient_material()){
             reason = 'INSUFFICIENT MATERIAL'
         }
         return `DRAW - ${reason}`
