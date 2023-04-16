@@ -22,8 +22,8 @@ export default function App(){
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/game/:id" element={<GameApp />} />
+                <Route path="https://shir0shi.github.io/chess-game/" element={<Home />} />
+                <Route path="https://shir0shi.github.io/chess-game/game/:id" element={<GameApp />} />
             </Routes>
         </Router>
     )
