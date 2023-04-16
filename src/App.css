@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: aliceblue;
 }
 
-.App-link {
-  color: #61dafb;
+.home{
+  min-height: 100vh;
+}
+.pointer{
+  cursor: pointer
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-columns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-form{
+  margin-top: 250px !important;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+.form-button{
+  background-color: #3a2e54 !important;
+}
+.board-container{
+  width: 600px;
+  height: 600px;
+
+}
+.blue-pink-bg{
+  background: rgb(224,177,255);
+  background: linear-gradient(0deg, rgba(224,177,255,1) 0%, rgba(255,163,191,1) 50%, rgba(112,252,255,1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.pink-blue-bg{
+  background: rgb(224,177,255);
+  background: linear-gradient(0deg, rgba(112,252,255,1) 0%, rgba(255,163,191,1) 50%, rgba(224,177,255,1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.board{
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.square{
+  width: 12.5%;
+  height: 12.5%;
+}
+.promote-square{
+  width: 50%;
+  height: 50%;
+}
+
+.white {
+
+  background: #fff;
+}
+.board-square{
+  width: 100%;
+  height: 100%;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.piece-container{
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.piece{
+  max-width: 70%;
+  max-height: 70%;
+}
+.game-over-text, .game-over-button{
+  position: absolute;
+  display: block;
+  font-family: 'Raleway',sans-serif; 
+  font-weight: 800; 
+  line-height: 65px; 
+  text-align: center;
+  color: #1a181f;
+}
+.game-over-text{
+  top: -5px;
+  font-size: 65px; 
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+.game-over-button{
+  border: 1px solid transparent;
+  border-radius: 40px;
+  margin-left: 25%;
+  margin-top: 161%;
+  padding: 0vh 3vh;
+  font-size: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: white;
+  
+}
+.game-over-button:hover{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.result-text{
+  font-size: 14px;
+  position: absolute;
+  display: block;
+  font-family: 'Raleway', sans-serif; 
+  top: 65px;
+}
+.grid{
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  column-gap: 1%;
+}
+.grid-item{
+  text-align: center;
+  font-family: 'Raleway', sans-serif; 
+  font-weight: 600;
+  color: #1a181f;
+}
+
+.share-game{
+  background-color: rgba(43, 43, 43, 0.61) !important;
+  position: absolute;
+  width: 400px;
+  top: 0;
+  left: 0;
+}
+.userName{
+  position: absolute;
+  bottom: 10px;
+  margin-left: 25vh;
+  width: 200px;
+  font-family: 'Raleway', sans-serif; 
+  font-size: 15px !important;
+  background-color: #393641 !important;
+}
+.opponent{
+  top: 10px;
 }
