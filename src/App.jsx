@@ -22,7 +22,7 @@ export default function App(){
     return (
         <Router>
             <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/game/:id" element={<GameApp />} />
             </Routes>
         </Router>
