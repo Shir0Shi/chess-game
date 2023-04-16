@@ -18,10 +18,14 @@ export default function Home(){
         setShowModal(!showModal)
     }
 
+    function handlePlayLocal(){
+        navigate(`/game/local`)
+    }
+
     async function startOnlineGame(startingPiece){
         const member = {
             uid: currentUser.uid,
-            piece: startingPiece === 'random' ? ['b', 'w'][Math.round(Math.random())] : startingPiece,
+            piece: startingPiece === 'r' ? ['b', 'w'][Math.round(Math.random())] : startingPiece,
             name: localStorage.getItem('userName'),
             creator: true
         }
@@ -31,20 +35,19 @@ export default function Home(){
             gameId: `${Math.random().toString(36).substr(2, 9)}_${Date.now()}`
         }
         await db.collection('games').doc(game.gameId).set(game)
-        console.log("Doc set")
         navigate(`/game/${game.gameId}`)
     }
 
     return(
     <>
         <div className="columns home">
-            <div className="column has-background-primary home-columns">
-                <button className="button is-link">
+            <div className="column home-columns has-backg-pink">
+                <button className="button  has-backg-blue" onClick={handlePlayLocal}>
                     Play Locally
                 </button>
             </div>
-            <div className="column has-background-link home-columns">
-            <button className="button is-primary" onClick={handlePlayOnline}>
+            <div className="column home-columns has-backg-blue">
+            <button className="button  has-backg-pink" onClick={handlePlayOnline}>
                 Play Online
             </button>
             </div>
