@@ -92,24 +92,23 @@
 .game-over-text, .game-over-button{
   position: absolute;
   display: block;
+  line-height: inherit;
   font-family: 'Raleway',sans-serif; 
-  font-weight: 800; 
-  line-height: 65px; 
   text-align: center;
   color: #1a181f;
 }
 .game-over-text{
-  top: -5px;
-  font-size: 65px; 
+  top: -10px;
+  font-size: 60px; 
   text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 }
 .game-over-button{
   border: 1px solid transparent;
   border-radius: 40px;
   margin-left: 25%;
-  margin-top: 161%;
+  margin-top: 205%;
   padding: 0vh 3vh;
-  font-size: 25px;
+  font-size: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   background-color: white;
   
@@ -122,7 +121,7 @@
   position: absolute;
   display: block;
   font-family: 'Raleway', sans-serif; 
-  top: 65px;
+  top: 59px;
 }
 .grid{
   display: inline-grid;
@@ -148,7 +147,7 @@
   position: absolute;
   bottom: 10px;
   /* margin-left: 25vh; */
-  width: 150px;
+  width: 100px;
   font-family: 'Raleway', sans-serif; 
   font-size: 15px !important;
   background-color: #393641 !important;
