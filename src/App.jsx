@@ -6,7 +6,7 @@ import UserForm from './UserForm'
 import GameApp from "./GameApp";
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth} from './firebase'
-
+import { HashRouter } from 'react-router-dom';
 
 export default function App(){
     const [user, loading, error] =  useAuthState(auth)
@@ -20,11 +20,13 @@ export default function App(){
         return <UserForm/>
     }
     return (
-        <Router>
+        <HashRouter>
+        {/* // <Router> */}
             <Routes>
-                <Route path="https://shir0shi.github.io/chess-game/" element={<Home />} />
-                <Route path="https://shir0shi.github.io/chess-game/game/:id" element={<GameApp />} />
+                <Route path="" element={<Home />} />
+                <Route path="/game/:id" element={<GameApp />} />
             </Routes>
-        </Router>
+        {/* // </Router> */}
+        </HashRouter>
     )
 }
